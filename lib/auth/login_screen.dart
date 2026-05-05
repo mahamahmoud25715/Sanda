@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sanad_app/auth/register_screen.dart';
+import 'package:sanad1_app/auth/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

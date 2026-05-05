@@ -1,10 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sanad1_app/core/language_controller.dart';
+import 'package:sanad1_app/core/theme_controller.dart';
+import 'package:sanad1_app/screens/splash_screen.dart';
 
-import 'package:sanad_app/core/theme_controller.dart';
-import 'package:sanad_app/core/language_controller.dart';
-import 'package:sanad_app/screens/splash_screen.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

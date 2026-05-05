@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:sanad_app/core/colors.dart';
+import 'package:sanad1_app/core/colors.dart';
 
 class AppInfo extends StatefulWidget {
   const AppInfo({super.key});
@@ -18,7 +18,6 @@ class _AppInfoState extends State<AppInfo> {
     getAppInfo();
   }
 
-  @override
   String appVersion = "";
   String buildNumber = "";
 
@@ -36,7 +35,15 @@ class _AppInfoState extends State<AppInfo> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("app_info"),
-        leading: Icon(Icons.info, color: AppColors.primaryDark),
+        leading: IconButton(
+    icon: const Icon(
+      Icons.arrow_back,
+      color: AppColors.primaryDark,
+    ),
+    onPressed: () {
+      Navigator.pop(context);
+    },
+  ),
       ),
 
       body: 

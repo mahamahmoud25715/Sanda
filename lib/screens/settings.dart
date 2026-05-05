@@ -1,10 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sanad1_app/core/colors.dart';
+import 'package:sanad1_app/core/language_controller.dart';
+import 'package:sanad1_app/core/theme_controller.dart';
 
-import 'package:sanad_app/core/colors.dart';
-import 'package:sanad_app/core/theme_controller.dart';
-import 'package:sanad_app/core/language_controller.dart';
+
 
 class Settings extends StatelessWidget {
   const Settings({super.key});
