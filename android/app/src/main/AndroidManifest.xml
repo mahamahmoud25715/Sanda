@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
+<<<<<<< HEAD
         android:label="sanad1_app"
+=======
+        android:label="sanad_app"
+>>>>>>> 2629d538c049cc46049e955c04477465729388a0
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

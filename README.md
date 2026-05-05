@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # sanad1_app
+=======
+# sanad_app
+>>>>>>> 2629d538c049cc46049e955c04477465729388a0
 
 A new Flutter project.
 
