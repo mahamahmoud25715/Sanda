@@ -45,12 +45,10 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
 
-            // 🌍 اللغة
             locale: context.locale,
             supportedLocales: context.supportedLocales,
             localizationsDelegates: context.localizationDelegates,
 
-            // 🌙 الثيم
             theme: ThemeData.light(),
             darkTheme: ThemeData.dark(),
             themeMode: context.watch<ThemeController>().themeMode,

@@ -1,26 +1,15 @@
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatefulWidget {
-  final bool isDark;
-  final Function(bool) onThemeChanged;
-  final String currentLang;
-  final Function(String) onLangChanged;
-
-  const RegisterScreen({
-    super.key,
-    required this.isDark,
-    required this.onThemeChanged,
-    required this.currentLang,
-    required this.onLangChanged,
-  });
-
   @override
-  State<RegisterScreen> createState() => _RegisterScreenState();
+  _RegisterScreenState createState() => _RegisterScreenState();
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+
   String? userRole;
   bool _isObscure = true;
+
 
   static const Color primaryColor = Color(0xFF102A43);
   static const Color accentColor = Color(0xFF179E79);
@@ -29,7 +18,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -38,12 +26,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(
           children: [
-
             Text(
               "إنشاء حساب جديد",
               style: TextStyle(
@@ -52,29 +38,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(height: 30),
 
-            const SizedBox(height: 30),
 
             TextField(
               decoration: InputDecoration(
                 labelText: "الاسم بالكامل",
                 prefixIcon: Icon(Icons.person_outline, color: accentColor),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               ),
             ),
+            SizedBox(height: 20),
 
-            const SizedBox(height: 20),
 
             DropdownButtonFormField<String>(
-              hint: const Text("اختر نوع الحساب"),
+
+              hint: Text("اختر نوع الحساب"),
               decoration: InputDecoration(
                 labelText: "نوع الحساب",
                 prefixIcon: Icon(Icons.badge_outlined, color: accentColor),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               ),
               items: ['مندوب', 'مدير شركة'].map((String value) {
                 return DropdownMenuItem<String>(
@@ -88,20 +71,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 });
               },
             ),
+            SizedBox(height: 20),
 
-            const SizedBox(height: 20),
 
             TextField(
               decoration: InputDecoration(
                 labelText: "البريد الإلكتروني",
                 prefixIcon: Icon(Icons.email_outlined, color: accentColor),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               ),
             ),
+            SizedBox(height: 20),
 
-            const SizedBox(height: 20),
 
             TextField(
               obscureText: _isObscure,
@@ -110,9 +91,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 prefixIcon: Icon(Icons.lock_outline, color: accentColor),
                 suffixIcon: IconButton(
                   icon: Icon(
-                    _isObscure
-                        ? Icons.visibility_off
-                        : Icons.visibility,
+                    _isObscure ? Icons.visibility_off : Icons.visibility,
                     color: primaryColor,
                   ),
                   onPressed: () {
@@ -121,20 +100,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     });
                   },
                 ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               ),
             ),
 
-            const SizedBox(height: 40),
+            SizedBox(height: 40),
+
 
             SizedBox(
               width: double.infinity,
               height: 55,
               child: ElevatedButton(
                 onPressed: () {
-                  // كود التسجيل
+                  // كود التسجيل مستقبلاً
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: accentColor,
@@ -142,14 +120,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                child: const Text(
+                child: Text(
                   "إنشاء حساب",
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
             ),
-
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
           ],
         ),
       ),
