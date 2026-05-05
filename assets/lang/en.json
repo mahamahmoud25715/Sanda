@@ -1,0 +1,20 @@
+{
+  "settings": "Settings",
+  "dark_mode": "Dark Mode",
+  "language": "Language",
+  "home": "Home",
+  "welcome": "Welcome",
+  
+
+  "profile": "Profile",
+  "user_name": "Name",
+  "edit_profile": "Edit profile",
+  "help": "Help",
+  "log_out": "Log out",
+  "app_info": "App info",
+   "Sanad_App": "Sanad App",
+   "Version" : "Version",
+   "build_Number":"build Number",
+   "about": "Get your orders delivered quickly and accurately with Sanad using smart location tracking"
+
+}
